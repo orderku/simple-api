@@ -75,7 +75,7 @@ function savetikVideo() {
 			const $ = cheerio.load(res.data)
 			const result = {
 				creator: {
-					profile: 'https://savetiknowm.org'+$('#tiktok-video-result > div.result-wrapper >  div.result > div > video').attr('src'),
+					profile: 'https://savetiknowm.org'+$('#tiktok-video-result > div.result-wrapper >  div.result > div:nth-child(2) > div > video').attr('src'),
 					username: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.username').text(),
 					nickname: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.user-nickname').text(),
 					ikiit: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
