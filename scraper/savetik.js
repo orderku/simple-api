@@ -78,6 +78,7 @@ function savetikVideo() {
 				result.push({ thumb })
 				resolve(result)
 			})
+			})
 			
 	})
 }
