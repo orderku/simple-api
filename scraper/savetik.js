@@ -78,8 +78,9 @@ function savetikVideo() {
 					profile: 'https://savetiknowm.org'+$('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > img').attr('src'),
 					username: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.username').text(),
 					nickname: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.user-nickname').text(),
+					ikiit: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
 				},
-				ikii: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
+				ikii: $('#tiktok-video-result > div.result-wrapper >  div.result > div > video').attr('src'),
 				desc: $('#tiktok-video-result > div > div.result > div:nth-child(2) > p').text(),
 				likes: $('#tiktok-video-result > div > div.result > div:nth-child(2) > ul > li > span').text()
 			}
