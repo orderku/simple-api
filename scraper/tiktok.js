@@ -51,8 +51,8 @@ var fullUrl = await fetch(url)
 const tiktok = await tiktok_scrape.getVideoMeta(fullUrl.url, {headers})
 const ingfo = tiktok.collector[0]
 const tiktok_dl = await musicaldown(url)
-const titoko = `https://tyz-api.herokuapp.com/downloader/tiktoknowm?link=${url}`
-const tikitoko = `https://tyz-api.herokuapp.com/converter/tomp3?url=https://tyz-api.herokuapp.com/downloader/tiktoknowm?link=${url}`
+const titoko = `https://bisakah.herokuapp.com/downloader/tiktoknowm?link=${url}`
+const tikitoko = `https://bisakah.herokuapp.com/converter/tomp3?url=https://bisakah.herokuapp.com/downloader/tiktoknowm?link=${url}`
 const obj = {
 	videoInfo: {
 		id: ingfo.id,
