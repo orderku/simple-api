@@ -73,19 +73,15 @@ function savetikVideo() {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			const result = {
-				creator: {
-					profile: 'https://savetiknowm.org'+$('#tiktok-video-result > div > div.result > div:nth-child(2) > video').attr('src'),
-					username: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.username').text(),
-					nickname: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.user-nickname').text(),
-					ikiit: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
-				},
-				ikii: $('#tiktok-video-result > div > div.result > div:nth-child(2) > video').attr('src'),
-				desc: $('#tiktok-video-result > div > div.result > div:nth-child(2) > p').text(),
-				likes: $('#tiktok-video-result > div > div.result > div:nth-child(2) > ul > li > span').text()
-			}
-			resolve(result)
-		})
+			ch('body > div.result > div').each(function(a, b) {
+				const thumb = ch(b).find('video > source').attr('src')
+				const creator = ch(b).find('a').attr('href')
+				const url1 = thumb.replace('/static/nowatermark/previews/', '').replace('.jpg', '')
+				const url = creator+'/'+url1
+				result.push({ thumb, creator, url })
+				resolve(result)
+			})
+			
 	})
 }
 
