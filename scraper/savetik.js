@@ -75,10 +75,7 @@ function savetikVideo() {
 			const $ = cheerio.load(res.data)
 			ch('body > div.result > div').each(function(a, b) {
 				const thumb = ch(b).find('video > source').attr('src')
-				const creator = ch(b).find('a').attr('href')
-				const url1 = thumb.replace('/static/nowatermark/previews/', '').replace('.jpg', '')
-				const url = creator+'/'+url1
-				result.push({ thumb, creator, url })
+				result.push({ thumb })
 				resolve(result)
 			})
 			
