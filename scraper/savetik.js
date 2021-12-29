@@ -79,7 +79,7 @@ function savetikVideo() {
 					username: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.username').text(),
 					nickname: $('#tiktok-video-result > div > div.result > div:nth-child(2) > div.profile > a.user-nickname').text(),
 				},
-				url_dl: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
+				ikii: $('#tiktok-video-result > div > div.result-wrapper > video').attr('src'),
 				desc: $('#tiktok-video-result > div > div.result > div:nth-child(2) > p').text(),
 				likes: $('#tiktok-video-result > div > div.result > div:nth-child(2) > ul > li > span').text()
 			}
