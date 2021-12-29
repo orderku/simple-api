@@ -73,7 +73,7 @@ function savetikVideo() {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			ch('body > div.result > div').each(function(a, b) {
+			ch('body > div.result > div').each(function(video, b) {
 				const thumb = ch(b).find('video > source').attr('src')
 				result.push({ thumb })
 				resolve(result)
