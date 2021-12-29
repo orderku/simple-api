@@ -40,7 +40,7 @@ const UrlPhotooxy = {
 router.get('/rain', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy3?text=${text}&link=${UrlPhotooxy.rain}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy3?text=${text}&link=${UrlPhotooxy.rain}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.gif', getBuffer)
 	res.sendFile(__path + '/tmp/image.gif')
@@ -50,7 +50,7 @@ router.get('/a8bit', async (req, res) => {
 	var text_2 = req.query.text_2
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
 	if (!text_2) return res.json({ message: 'Masukan parameter Text_2'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.a8bit}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.a8bit}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -58,7 +58,7 @@ router.get('/a8bit', async (req, res) => {
 router.get('/neonlights', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.neonlights}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.neonlights}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -66,7 +66,7 @@ router.get('/neonlights', async (req, res) => {
 router.get('/fall', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.fall}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.fall}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -74,7 +74,7 @@ router.get('/fall', async (req, res) => {
 router.get('/summer3d', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.summer3d}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.summer3d}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -82,7 +82,7 @@ router.get('/summer3d', async (req, res) => {
 router.get('/nature3d', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.nature3d}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.nature3d}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -90,7 +90,7 @@ router.get('/nature3d', async (req, res) => {
 router.get('/batik', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.batik}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.batik}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -98,7 +98,7 @@ router.get('/batik', async (req, res) => {
 router.get('/silk', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.silk}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.silk}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -106,7 +106,7 @@ router.get('/silk', async (req, res) => {
 router.get('/permen', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.permen}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.permen}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -114,7 +114,7 @@ router.get('/permen', async (req, res) => {
 router.get('/horror', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.horror}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.horror}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -122,7 +122,7 @@ router.get('/horror', async (req, res) => {
 router.get('/kayu', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.kayu}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.kayu}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -130,7 +130,7 @@ router.get('/kayu', async (req, res) => {
 router.get('/wooden', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.wooden}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.wooden}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -138,7 +138,7 @@ router.get('/wooden', async (req, res) => {
 router.get('/butterfly', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.butterfly}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.butterfly}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -146,7 +146,7 @@ router.get('/butterfly', async (req, res) => {
 router.get('/metallic', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.metallic}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.metallic}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -158,7 +158,7 @@ router.get('/dark', async (req, res) => {
 	var text_2 = req.query.text_2
 	if (!text) return res.json({ message: 'jenis'})
 	if (!text_2) return res.json({ message: 'Masukan parameter Text_2'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.dark}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.dark}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -215,7 +215,7 @@ router.get('/photooxy2', async (req, res) => {
 router.get('/shadow', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.shadow}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.shadow}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -223,7 +223,7 @@ router.get('/shadow', async (req, res) => {
 router.get('/cup', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.cup}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.cup}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -233,7 +233,7 @@ router.get('/captain_amerika', async (req, res) => {
 	var text_2 = req.query.text_2
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
 	if (!text_2) return res.json({ message: 'Masukan parameter Text_2'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.captain_amerika}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.captain_amerika}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -241,7 +241,7 @@ router.get('/captain_amerika', async (req, res) => {
 router.get('/romantic', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.romantic}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.romantic}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -249,7 +249,7 @@ router.get('/romantic', async (req, res) => {
 router.get('/smoke', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.smoke}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.smoke}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -257,7 +257,7 @@ router.get('/smoke', async (req, res) => {
 router.get('/burn_paper', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.burn_paper}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.burn_paper}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -265,7 +265,7 @@ router.get('/burn_paper', async (req, res) => {
 router.get('/naruto', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.naruto}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.naruto}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -273,7 +273,7 @@ router.get('/naruto', async (req, res) => {
 router.get('/love_message', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.love_message}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.love_message}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -283,7 +283,7 @@ router.get('/tik_tok', async (req, res) => {
 	var text_2 = req.query.text_2
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
 	if (!text_2) return res.json({ message: 'Masukan parameter Text_2'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.tik_tok}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy2?text=${text}&text_2=${text_2}&link=${UrlPhotooxy.tik_tok}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -291,7 +291,7 @@ router.get('/tik_tok', async (req, res) => {
 router.get('/flower_heart', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.flower_heart}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.flower_heart}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -299,7 +299,7 @@ router.get('/flower_heart', async (req, res) => {
 router.get('/wodden_board', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.wodden_board}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.wodden_board}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
@@ -307,7 +307,7 @@ router.get('/wodden_board', async (req, res) => {
 router.get('/glowing_neon', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://apiakuari1.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.glowing_neon}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.glowing_neon}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
