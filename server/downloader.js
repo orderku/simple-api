@@ -121,8 +121,8 @@ router.get('/youtube', async(req, res) => {
 	if (!link) return res.json({ message: 'masukan parameter Link' })
 	var yt1 = await yta(link)
 	var yt2 = await ytv(link)
-	const audioUrl = await shorts('https://tyz-api.herokuapp.com/converter/toFile?url='+yt1.dl_link)
-	const videoUrl = await shorts('https://tyz-api.herokuapp.com/converter/toFile?url='+yt2.dl_link)
+	const audioUrl = await shorts('https://bisakah.herokuapp.com/converter/toFile?url='+yt1.dl_link)
+	const videoUrl = await shorts('https://bisakah.herokuapp.com/converter/toFile?url='+yt2.dl_link)
 	try {
 		res.json({
 			title: yt1.title,
@@ -143,7 +143,7 @@ router.get('/play', async(req, res) => {
 	let results = await yts(query)
   	let vid = results.all.find(video => video.seconds < 3600)
 	if (!vid) return res.json({ message: 'not found!'})
-	var hasil = await axios.get('https://tyz-api.herokuapp.com/downloader/youtube?link='+vid.url)
+	var hasil = await axios.get('https://bisakah.herokuapp.com/downloader/youtube?link='+vid.url)
 	try {
 		res.json(hasil.data)
 	} catch(err) {
@@ -238,7 +238,7 @@ router.get('/spotify', async(req, res) => {
 	if (!link) return res.json({ message: 'masukan parameter Link' })
 	var hasil = await spotifydl.getTrack(link)
 	try {
-		res.json({ info: hasil, dl_lnk: `https://tyz-api.herokuapp.com/downloader/spotifydl?link=${link}` })
+		res.json({ info: hasil, dl_lnk: `https://bisakah.herokuapp.com/downloader/spotifydl?link=${link}` })
 	} catch(err) {
 		console.log(err)
 		res.json({ message: 'Ups, error' })
