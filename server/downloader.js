@@ -27,7 +27,7 @@ async function shorts(url) {
 router.get('/tiktok', async(req, res) => {
 	var link = req.query.link
 	if (!link) return res.json({ message: 'masukan parameter Link' })
-	var hasil = await tiktok(link)
+	var hasil = await musicaldown(link)
 	try {
 		res.json(hasil)
 	} catch(err) {
