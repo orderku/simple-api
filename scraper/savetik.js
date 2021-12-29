@@ -72,7 +72,7 @@ function savetikVideo() {
 				"user-agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 			}
 		}).then(res => {
-			const $ = cheerio.load(res.data)
+			const ch = cheerio.load(res.data)
 			ch('body > div.result > div').each(function(video, b) {
 				const thumb = ch(b).find('video > source').attr('src')
 				result.push({ thumb })
