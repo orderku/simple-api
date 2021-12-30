@@ -347,11 +347,7 @@
 		  <center>
      
   Anda Pengunjung ke:
-  <object data="http://172.105.114.130/visitor/iki.html"
-width="400"
-height="300"
-type="text/html">
-</object>
+  <body id="page-top" onload="getvisitor();">
 
    </center>  
           </div>
@@ -392,5 +388,17 @@ type="text/html">
     <script src="https://indrijunanda.github.io/RuangAdmin/js/ruang-admin.min.js"></script>
   </div>
 </body>
-
+<script>
+  function getvisitor(){
+              var xhr = new XMLHttpRequest();
+              var url = 'https://api.countapi.xyz/hit/api-alphabot.herokuapp.com/visits';
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText);
+  document.getElementById("visitor").textContent = data.value
+              };
+              xhr.open("GET", url, true);
+              xhr.send();
+  }
+  
+</script>
 </html>
