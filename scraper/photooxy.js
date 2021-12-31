@@ -13,7 +13,7 @@ async function photoXy_3(URL, selectImage_0) {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			const img = $('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
+			const img = 'https://photooxy.com'+$('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
 			resolve(img)
 		}).catch(reject)
 	})
@@ -33,7 +33,7 @@ async function photoXy_1(URL, text_1) {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			const img = $('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
+			const img = 'https://photooxy.com'+$('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
 			resolve(img)
 		}).catch(reject)
 	})
@@ -50,7 +50,7 @@ async function photoXy_2(URL, text_1, text_2) {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			const img = $('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
+			const img = 'https://photooxy.com'+$('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
 			resolve(img)
 		}).catch(reject)
 	})
