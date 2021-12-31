@@ -26,7 +26,7 @@ async function photoXy_1(URL, text_1) {
 		axios.request({
 			url: URL,
 			method: "POST",
-			data: new URLSearchParams(Object.entries({ text_1: text_1, login: "OK"})),
+			data: new URLSearchParams(Object.entries({ text_1: text-0, login: "OK"})),
 			headers: {
 				"content-type": "application/x-www-form-urlencoded",
 				"user-agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
