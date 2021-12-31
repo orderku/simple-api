@@ -215,7 +215,7 @@ router.get('/photooxy2', async (req, res) => {
 router.get('/shadow', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.shadow}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text_0=${text}&link=${UrlPhotooxy.shadow}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
