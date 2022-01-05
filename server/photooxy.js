@@ -5,7 +5,7 @@ const fs = require('fs')
 const fetch = require('node-fetch')
 
 
-const { photoXy_1, photoXy_2, photoXy_3 } = require('../scraper/photooxy')
+const { photoXy_1, photoXy_2, photoXy_3, lolos } = require('../scraper/photooxy')
 const UrlPhotooxy = {
 	shadow: 'https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html',
 	captain_amerika: 'https://photooxy.com/captain-america-text-generator-403.html',
@@ -59,7 +59,7 @@ router.get('/a8bit', async (req, res) => {
 router.get('/neonlights', async (req, res) => {
 	var text = req.query.text
 	if (!text) return res.json({ message: 'Masukan parameter Text'})
-	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/photooxy1?text=${text}&link=${UrlPhotooxy.neonlights}`)
+	var img = await fetch(`https://bisakah.herokuapp.com/photooxy/lolos?text=${text}&link=${UrlPhotooxy.neonlights}`)
 	var getBuffer = await img.buffer()
 	await fs.writeFileSync(__path + '/tmp/image.jpg', getBuffer)
 	res.sendFile(__path + '/tmp/image.jpg')
