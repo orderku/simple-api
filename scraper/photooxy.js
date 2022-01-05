@@ -21,7 +21,7 @@ async function photoXy_3(URL, selectImage_0) {
 
 
 
-async function photoXy_1(URL, text_0) {
+async function photoXy_1(URL, text_1) {
 	return new Promise((resolve, reject) => {
 		axios.request({
 			url: URL,
