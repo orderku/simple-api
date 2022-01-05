@@ -4,6 +4,7 @@ var router = express.Router();
 const fs = require('fs')
 const fetch = require('node-fetch')
 
+
 const { photoXy_1, photoXy_2, photoXy_3 } = require('../scraper/photooxy')
 const UrlPhotooxy = {
 	shadow: 'https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html',
