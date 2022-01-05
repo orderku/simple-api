@@ -33,7 +33,7 @@ async function photoXy_1(URL, text_0) {
 			}
 		}).then(res => {
 			const $ = cheerio.load(res.data)
-			const img = 'https://photooxy.com'+$('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.thumbnail > img').attr('src')
+			const img = 'https://photooxy.com'+$('#wrapper > div.content-wrapper > section > div > div.col-md-9 > div.view-image-wrapper > div.thumbnail > img').attr('src')
 			resolve(img)
 		}).catch(reject)
 	})
