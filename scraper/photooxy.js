@@ -149,7 +149,7 @@ async function lolos(url, text) {
     hasilcookie
   );
   const hasil = await prosesimage.json();
-  return `https://textpro.me${hasil.fullsize_image}`;
+  return `https://photooxy.com${hasil.fullsize_image}`;
 }
 
 
