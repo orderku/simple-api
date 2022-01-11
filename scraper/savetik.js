@@ -79,7 +79,7 @@ function savetikVideo() {
 					usernickname: $('#tiktok-video-result > div.result-wrapper > div.result > div:nth-child(2) > div > a.user-nickname').text(),
 					desc: $('#tiktok-video-result > div.result-wrapper > div.result > div:nth-child(2) > p').text(),
 				},
-				url: 'https://savetiknowm.org'+$('#tiktok-video-result > div.result-wrapper > div.result > div > video > source').attr('src')
+				url: $('#tiktok-video-result > div.result-wrapper > div.result > div > video > source').attr('src')
 			}
 			console.log(result)
 			resolve(result)
