@@ -108,9 +108,9 @@ async function tiktokHastag(query) {
 		axios.get('https://hashtags.tiktokder.com/'+query).then(resp => {
 			const $ = cheerio.load(resp.data)
 			const Vidlink = []
-			const main = $('body > div.videos-grid > div > a')
+			const main = $('body > div.videos-grid > div.video-card > a')
 			main.each(function() {
-				const URL = 'https://tiktokder.com'+$(this).attr('href')
+				const URL = $(this).attr('href')
 				Vidlink.push(URL)
 			})
 			pickrandom(Vidlink).then(res => {
