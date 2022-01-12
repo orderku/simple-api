@@ -38,7 +38,7 @@ router.get('/mynimekuDownload', async(req, res) => {
 })
 
 router.get('/storyanime', async(req, res) => {
-  let res_ = await fetch('https://raw.githubusercontent.com/Arya-was/endak-tau/main/storyanime.json')
+  let res_ = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storyanime.json')
   let data = await res_.json()
   let json = data[Math.floor(Math.random() * data.length)]
   var dl_link = await dl(json)
