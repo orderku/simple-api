@@ -7,6 +7,7 @@ const { getBuffer } = require('../lib/function')
 const { dl } = require('../scraper/aiovideodl')
 
 const mynimeku = require('../scraper/mynime')
+const pornvid = require('../scraper/iki')
 
 
 async function sleep(ms) {
@@ -44,7 +45,11 @@ router.get('/storyanime', async(req, res) => {
   const buffer = await getBuffer(dl_link.medias[0].url)
   await fs.writeFileSync(__path +`/tmp/audio.mp4`, buffer)
   await res.sendFile(__path +`/tmp/audio.mp4`)
+	
 })
 
-
+router.get('/pornvid', async(req, res) => {
+	var result = await pornvid()
+	res.json({ result })
+})
 module.exports = router
