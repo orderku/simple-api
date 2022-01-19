@@ -3,6 +3,7 @@ var router = express.Router();
 const hxz = require('hxz-api')
 const yts = require('yt-search')
 const axios = require('axios')
+const fetch = require('node-fetch')
 __path = process.cwd()
 const fs = require('fs')
 const { getBuffer } = require('../lib/function')
