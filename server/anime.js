@@ -53,7 +53,7 @@ router.get('/storysad', async(req, res) => {
   let data = await res_.json()
   let json = data[Math.floor(Math.random() * data.length)]
   var dl_link = await musicaldown(json)
-  const buffer = await getBuffer(dl_link.nowm)
+  const buffer = await getBuffer(dl_link.result.nowm)
   await fs.writeFileSync(__path +`/tmp/audio.mp4`, buffer)
   await res.sendFile(__path +`/tmp/audio.mp4`)
 	
