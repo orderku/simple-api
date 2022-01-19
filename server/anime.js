@@ -50,11 +50,11 @@ router.get('/storyanime', async(req, res) => {
 
 
 router.get('/storysad', async(req, res) => {
-  let res_ = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storysad.json')
-  let data = await res_.json()
-  let json = data[Math.floor(Math.random() * data.length)]
-  var dl_link = await musicaldown(json)
-  const buffer = await getBuffer(dl_link.result.nowm)
+  let res_l = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storysad.json')
+  let datal = await res_l.json()
+  let jsonl = datal[Math.floor(Math.random() * datal.length)]
+  var dl_linkl = await musicaldown(jsonl)
+  const buffer = await getBuffer(dl_linkl.result.nowm)
   await fs.writeFileSync(__path +`/tmp/audio.mp4`, buffer)
   await res.sendFile(__path +`/tmp/audio.mp4`)
 	
