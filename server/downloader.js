@@ -40,7 +40,7 @@ router.get('/tiktoknowm', async(req, res) => {
 	if (!link) return res.json({ message: 'masukan parameter Link' })
 	var hasil = await musicaldown(link)
 	try {
-		var data = await getBuffer(hasil.nowm)
+		var data = await getBuffer(hasil.result.nowm)
 		await fs.writeFileSync(__path +'/tmp/tiktok.mp4', data)
    		await res.sendFile(__path +'/tmp/tiktok.mp4')
 	} catch(err) {
@@ -53,7 +53,7 @@ router.get('/tiktokaudio', async(req, res) => {
 	if (!link) return res.json({ message: 'masukan parameter Link' })
 	var hasil = await musicaldown(link)
 	try {
-		var data = await getBuffer(hasil.audio)
+		var data = await getBuffer(hasil.result.audio)
 		await fs.writeFileSync(__path +'/tmp/tiktok.mp4', data)
    		await res.sendFile(__path +'/tmp/tiktok.mp4')
 	} catch(err) {
