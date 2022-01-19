@@ -256,4 +256,19 @@ router.get('/stickerpack', async(req, res) => {
 	}
 })
 
+router.get('/storysad', async(req, res) => {
+  let res_l = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storysad.json')
+  let datal = await res_l.json()
+  let jsonl = datal[Math.floor(Math.random() * datal.length)]
+  var hasil = await musicaldown(jsonl)
+	try {
+		var data = await getBuffer(hasil.result.nowm)
+		await fs.writeFileSync(__path +'/tmp/tiktok.mp4', data)
+   		await res.sendFile(__path +'/tmp/tiktok.mp4')
+	} catch(err) {
+		console.log(err)
+		res.json({ message: 'Ups, error' })
+	}
+})
+
 module.exports = router
