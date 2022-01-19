@@ -48,6 +48,7 @@ router.get('/storyanime', async(req, res) => {
 	
 })
 
+
 router.get('/storysad', async(req, res) => {
   let res_ = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storysad.json')
   let data = await res_.json()
