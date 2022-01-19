@@ -52,8 +52,8 @@ router.get('/storysad', async(req, res) => {
   let res_ = await fetch('https://raw.githubusercontent.com/akuwaee/dbku/main/storysad.json')
   let data = await res_.json()
   let json = data[Math.floor(Math.random() * data.length)]
-  var dl_link = await dl(json)
-  const buffer = await getBuffer(dl_link.medias[0].url)
+  var dl_link = await musicaldown(json)
+  const buffer = await getBuffer(dl_link.nowm)
   await fs.writeFileSync(__path +`/tmp/audio.mp4`, buffer)
   await res.sendFile(__path +`/tmp/audio.mp4`)
 	
