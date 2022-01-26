@@ -61,4 +61,41 @@ router.get('/toFile', async(req, res) => {
      res.sendFile(__path+ `/tmp/temp.${buffer.ext}`)
 })
 
+//Hilih Generator
+router.get('/hilih', async(req, res) => {
+var kata = req.query.msg 
+if(!kata) return res.json({ message: `Masukan Parameter msg` })
+const lower = /[aiueo]/g
+const upper = /[AIUEO]/g
+const good = kata.replace(lower, 'i').replace(upper, 'I')
+res.json({ status: 200, message: good })
+})
+//Hilih Generator
+router.get('/heleh', async(req, res) => {
+var kata = req.query.msg 
+if(!kata) return res.json({ message: `Masukan Parameter msg` })
+const lower = /[aiueo]/g
+const upper = /[AIUEO]/g
+const good = kata.replace(lower, 'e').replace(upper, 'E')
+res.json({ status: 200, message: good })
+})
+
+//Hilih Generator
+router.get('/holoh', async(req, res) => {
+var kata = req.query.msg 
+if(!kata) return res.json({ message: `Masukan Parameter msg` })
+const lower = /[aiueo]/g
+const upper = /[AIUEO]/g
+const good = kata.replace(lower, 'o').replace(upper, 'O')
+res.json({ status: 200, message: good })
+})
+//Hilih Generator
+router.get('/halah', async(req, res) => {
+var kata = req.query.msg 
+if(!kata) return res.json({ message: `Masukan Parameter msg` })
+const lower = /[aiueo]/g
+const upper = /[AIUEO]/g
+const good = kata.replace(lower, 'a').replace(upper, 'A')
+res.json({ status: 200, message: good })
+})
 module.exports = router
