@@ -65,7 +65,7 @@ router.get('/tiktokaudio', async(req, res) => {
 router.get('/igdl', async(req, res) => {
 	var link = req.query.link
 	if (!link) return res.json({ message: 'masukan parameter Link' })
-	var hasil = await igDownload(link)
+	var hasil = await dl(link)
 	try {
 		res.json(hasil)
 	} catch(err) {
