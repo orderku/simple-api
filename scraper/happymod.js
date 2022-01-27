@@ -2,6 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 
 const baseUrl = 'https://www.happymod.com/'
+const baseUrlk = 'https://www.happymod.com'
 
 function happymodSearch(query) {
 	return new Promise((resolve, reject) => {
@@ -12,7 +13,7 @@ function happymodSearch(query) {
 			var title = $(d).find("a").text().trim();
 			var icon = $(d).find("img.lazy").attr('data-original');
 			var rating = $(d).find("span").text();
-			var link = baseUrl+$(d).find("a").attr('href');
+			var link = baseUrlk+$(d).find("a").attr('href');
 			hasil.push({
 				title,
 				icon,
