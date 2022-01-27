@@ -2,7 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 
 const baseUrl = 'https://www.happymod.com/'
-const baseUrlk = 'https://www.happymod.com'
+const baseUrlk = 'https://happymod.com'
 
 function happymodSearch(query) {
 	return new Promise((resolve, reject) => {
